@@ -89,4 +89,4 @@ form.addEventListener('submit', (e) => {
         search.value = ''
     }
 })
-
+console.log("hello server")
