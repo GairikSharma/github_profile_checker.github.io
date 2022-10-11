@@ -1,44 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200&family=Quicksand:wght@300&family=Titillium+Web&display=swap');
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  color: grey;
+  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  
 }
 
 body {
-  background-color: #2a2a72;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   overflow: hidden;
   margin: 0;
+  min-height: 100vh;
+  
+
+  background-size: auto 100%;
+  
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
 }
 
 .user-form {
   width: 100%;
-  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-form input {
-  width: 100%;
+  z-index: 100;
+  width: 75%;
   display: block;
-  background-color: #4c2885;
+  background-color: transparent;
   border: none;
   border-radius: 10px;
   color: #fff;
   padding: 1rem;
-  margin-bottom: 2rem;
-  font-family: inherit;
   font-size: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 10px 50px -6px rgba(133, 223, 237, 1);
+}
+
+.user-form input:focus {
+  border: 3.0px solid rgba(133, 223, 237, 1);
 }
 
 .user-form input::placeholder {
-  color: #bbb;
+  color: grey;
 }
 
 .user-form input:focus {
@@ -46,19 +71,29 @@ body {
 }
 
 .card {
-  max-width: 800px;
-  background-color: #4c2885;
+  width: 80%;
+  background-color: white;
   border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 10px 50px -6px rgba(133, 223, 237, 1);
   display: flex;
-  padding: 3rem;
-  margin: 0 1.5rem;
+  padding: 18px;
+  margin: 0rem;
+}
+
+.card-content {
+  width: 100%;
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar {
   border-radius: 50%;
-  border: 10px solid #2a2a72;
+  border: 3.5px solid rgba(133, 223, 237, 1);
+  box-shadow: 6px 10px 50px -6px rgba(133, 223, 237, 1);
   height: 150px;
   width: 150px;
 }
@@ -93,21 +128,39 @@ body {
 .repo {
   text-decoration: none;
   color: #fff;
-  background-color: #212a72;
+  background-color: #59bbe4;
+  border-radius: 7px;
   font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
+  margin-top: 1.0rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   display: inline-block;
+  border: #2eb1ea solid 3px;
 }
 
-@media (max-width: 500px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
+.repo:focus {
+  box-shadow: 6px 10px 50px -6px rgba(133, 223, 237, 1);
+}
+
+@media (max-width: 600px) {
+  .user-form input {
+    width: 80%;
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    box-shadow: 6px 10px 50px -6px rgba(133, 223, 237, 1);
   }
 
-  .user-form {
-    max-width: 400px;
+  .card {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
